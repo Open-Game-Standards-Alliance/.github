@@ -69,14 +69,17 @@ listening understands it.
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#dcebd0', 'primaryTextColor': '#1d4730', 'primaryBorderColor': '#1d4730', 'lineColor': '#86b65a', 'clusterBkg': '#f1f7ec', 'clusterBorder': '#86b65a', 'edgeLabelBackground': '#f1f7ec'}}}%%
 flowchart LR
-    subgraph sources["Games"]
+    subgraph sources["Sources"]
         P["Engine plugin<br/>Unity · Unreal · Godot · .NET"]
         M["Loader mod<br/>BepInEx · UE4SS · UEVR"]
+        B["OGSA-TS Bridge<br/>Forza · F1 · ACC · …"]
     end
     P -- "OGSA-TS over UDP multicast<br/>(local network only)" --> L(("LAN"))
     M -- "OGSA-TS" --> L
-    L --> R["Motion platforms"]
-    L --> H["Haptics"]
+    B -- "OGSA-TS" --> L
+    L --> C["GameConn"]
+    C --> R["Motion platforms"]
+    C --> H["Haptics"]
     L --> D["Dashboards and cockpits"]
     L --> G["Loggers"]
 ```
@@ -92,6 +95,8 @@ flowchart LR
 | **Building hardware or receiver software** | [ogsa-ts-dotnet](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet) for the receiving library and a reference receiver, then [IMPLEMENTING.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/IMPLEMENTING.md) |
 | **Implementing in another language** | [The standard](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard): the schema, the encoding rules and a conformance corpus to test against |
 | **Playing a game that has no telemetry** | A [loader mod](#loader-mods) |
+| **Playing a game with its own telemetry output** (Forza, F1, Assetto Corsa, ...) | [OGSA-TS Bridge](#apps), which translates it to OGSA-TS |
+| **Owning a motion rig or haptics** | [GameConn](#apps), which drives them from any OGSA-TS game |
 
 <details>
 <summary><b>Quick start: Unity</b></summary>
@@ -209,6 +214,16 @@ on every change.
 | [uevr-ogsa-ts](https://github.com/BrianGilbert/uevr-ogsa-ts) | Unreal Engine 4 and 5 games in VR | UEVR | | [Latest release](https://github.com/BrianGilbert/uevr-ogsa-ts/releases/latest) |
 
 Help with the mods is on the [mod support server](https://discord.gg/yyCp5D2Ccp).
+
+### Apps
+
+Two desktop apps cover both ends of the stream. Both live under
+[@BrianGilbert](https://github.com/BrianGilbert) and are in development.
+
+| App | What it does | Status |
+| --- | --- | --- |
+| [OGSA-TS Bridge](https://github.com/BrianGilbert/ogsa-ts-bridge) | Translates the telemetry games already emit into OGSA-TS, so OGSA devices work with them today: Forza Horizon and Motorsport, F1, DiRT Rally 2.0, DiRT 4, WRC, Project CARS, Automobilista 2, Assetto Corsa, ACC, BeamNG.drive and Live for Speed. It detects the running game automatically and adds tens of microseconds of latency. | In development |
+| [GameConn](https://github.com/BrianGilbert/GameConn) | Receives OGSA-TS from any game on the network and drives hardware through plugins: Yaw motion simulators, DOF Reality platforms and audio exciters so far, with per-game profiles. Runs on Windows and Linux. | In development |
 
 ---
 
