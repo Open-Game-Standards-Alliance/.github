@@ -174,9 +174,9 @@ not rediscovered per game.
   Cap'n Proto for the same frame, proven against a shared
   [conformance corpus](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/tree/main/conformance)
   that is independently checked with the official Cap'n Proto tools.
-- **Proven in shipped games.** The loader mods have run in Subnautica Below
-  Zero, The Gunk, Stray and RoboCop: Rogue City, with no changes to the
-  games.
+- **Proven in shipped games.** The Loader mods from table below 
+  have run in Subnautica Below Zero, The Gunk, Stray and RoboCop: Rogue City,
+  Hot Wheels Unleashed, with no changes to the games.
 
 ### Implementations
 
@@ -195,9 +195,10 @@ ahead-of-time platforms such as IL2CPP.
 
 ### Loader mods
 
-OGSA-TS for games that don't ship it, with no changes to the game: each mod
-loads through an established mod loader, finds the pawn the player controls,
-and publishes its motion. They live under
+OGSA-TS for tens of thousands of Unity and Unreal Engine games that don't
+ship it, with no changes to the game: each mod loads through an established
+mod loader, finds the pawn the player controls, and publishes its motion.
+They live under
 [@BrianGilbert](https://github.com/BrianGilbert) and are released from CI
 on every change.
 
