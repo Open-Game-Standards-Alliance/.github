@@ -217,13 +217,15 @@ Help with the mods is on the [mod support server](https://discord.gg/yyCp5D2Ccp)
 
 ### Apps
 
-Two desktop apps cover both ends of the stream. Both live under
-[@BrianGilbert](https://github.com/BrianGilbert) and are in development.
+Two desktop apps cover both ends of the stream. Both are in development
+under [@BrianGilbert](https://github.com/BrianGilbert), and
+[sponsorship](https://github.com/sponsors/BrianGilbert) is what funds the
+time to finish them.
 
 | App | What it does | Status |
 | --- | --- | --- |
 | [OGSA-TS Bridge](https://github.com/BrianGilbert/ogsa-ts-bridge) | Translates the telemetry games already emit into OGSA-TS, so OGSA devices work with them today: Forza Horizon and Motorsport, F1, DiRT Rally 2.0, DiRT 4, WRC, Project CARS, Automobilista 2, Assetto Corsa, ACC, BeamNG.drive and Live for Speed. It detects the running game automatically and adds tens of microseconds of latency. | In development |
-| [GameConn](https://github.com/BrianGilbert/GameConn) | Receives OGSA-TS from any game on the network and drives hardware through plugins: Yaw motion simulators, DOF Reality platforms and audio exciters so far, with per-game profiles. Runs on Windows and Linux. | In development |
+| [GameConn](https://github.com/BrianGilbert/GameConn) | Receives OGSA-TS from any game on the network and drives hardware through plugins: Yaw motion simulators, DOF Reality platforms and audio exciters so far, with per-game profiles. It is built cross-platform, targeting at least Windows and Linux. The aim is for sponsorship to fund its development so that it can stay free. | In development |
 
 ---
 
