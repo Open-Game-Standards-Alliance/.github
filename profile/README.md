@@ -211,7 +211,7 @@ on every change.
 | --- | --- | --- | --- | --- |
 | [bepinex-ogsa-ts](https://github.com/BrianGilbert/bepinex-ogsa-ts) | Unity games, Mono and IL2CPP | BepInEx 5 (Mono), BepInEx 6 (IL2CPP) | Subnautica Below Zero, Hot Wheels Unleashed | [Latest release](https://github.com/BrianGilbert/bepinex-ogsa-ts/releases/latest) |
 | [ue4ss-ogsa-ts](https://github.com/BrianGilbert/ue4ss-ogsa-ts) | Unreal Engine 4 and 5 games | UE4SS | The Gunk, Stray, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/ue4ss-ogsa-ts/releases/latest) |
-| [uevr-ogsa-ts](https://github.com/BrianGilbert/uevr-ogsa-ts) | Unreal Engine 4 and 5 games in VR | UEVR | Stray | [Latest release](https://github.com/BrianGilbert/uevr-ogsa-ts/releases/latest) |
+| [uevr-ogsa-ts](https://github.com/BrianGilbert/uevr-ogsa-ts) | Unreal Engine 4 and 5 games in VR | UEVR | The Gunk, Stray | [Latest release](https://github.com/BrianGilbert/uevr-ogsa-ts/releases/latest) |
 
 Help with the mods is on the [mod support server](https://discord.gg/yyCp5D2Ccp).
 
