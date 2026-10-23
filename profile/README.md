@@ -146,6 +146,22 @@ Every SDK is plain source with no third-party runtime dependencies, so it
 builds wherever its engine builds: Windows, Linux, macOS, ARM, and
 ahead-of-time platforms such as IL2CPP.
 
+## Loader mods
+
+OGSA-TS for games that don't ship it, with no changes to the game: each mod
+loads through an established mod loader, finds the pawn the player controls,
+and publishes its motion. They live under
+[@BrianGilbert](https://github.com/BrianGilbert) and are released from CI
+on every change.
+
+| Mod | For | Loads through | Validated in | Download |
+| --- | --- | --- | --- | --- |
+| [bepinex-ogsa-ts](https://github.com/BrianGilbert/bepinex-ogsa-ts) | Unity games, Mono and IL2CPP | BepInEx 5 (Mono), BepInEx 6 (IL2CPP) | Subnautica Below Zero | [Latest release](https://github.com/BrianGilbert/bepinex-ogsa-ts/releases/latest) |
+| [ue4ss-ogsa-ts](https://github.com/BrianGilbert/ue4ss-ogsa-ts) | Unreal Engine 4 and 5 games | UE4SS | The Gunk, Stray, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/ue4ss-ogsa-ts/releases/latest) |
+| [uevr-ogsa-ts](https://github.com/BrianGilbert/uevr-ogsa-ts) | Unreal Engine 4 and 5 games in VR | UEVR | | [Latest release](https://github.com/BrianGilbert/uevr-ogsa-ts/releases/latest) |
+
+Help with the mods is on the [mod support server](https://discord.gg/yyCp5D2Ccp).
+
 ## Background
 
 [**A common language for game telemetry**](https://briangilbert.net/writings/local-telemetry-standard/):
