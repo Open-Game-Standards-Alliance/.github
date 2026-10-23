@@ -263,4 +263,4 @@ exists now.
   everything here forward: the OGSA standards and their SDKs, the loader
   mods, OGSA-TS Bridge and GameConn.
 
-<sub>Founded by [Brian Gilbert](https://github.com/BrianGilbert) in 2024 and developed in the open. Everything here is MIT licensed and free for anyone to implement, from hobbyists to hardware vendors.</sub>
+<sub>Founded by [Brian Gilbert](https://github.com/BrianGilbert) in 2024 and developed in the open. The standards and their SDKs are MIT licensed and free for anyone to implement, from hobbyists to hardware vendors.</sub>
