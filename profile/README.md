@@ -180,8 +180,8 @@ not rediscovered per game.
   [conformance corpus](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/tree/main/conformance)
   that is independently checked with the official Cap'n Proto tools.
 - **Proven in shipped games.** The [loader mods](#loader-mods) have run in
-  Subnautica Below Zero, Hot Wheels Unleashed, The Gunk, Stray and RoboCop:
-  Rogue City, with no changes to the games.
+  Subnautica Below Zero, Hyper Storm, Exo One, Sable, Hot Wheels Unleashed,
+  The Gunk, Stray and RoboCop: Rogue City, with no changes to the games.
 
 ### Implementations
 
@@ -209,7 +209,7 @@ on every change.
 
 | Mod | For | Loads through | Validated in | Download |
 | --- | --- | --- | --- | --- |
-| [bepinex-ogsa-ts](https://github.com/BrianGilbert/bepinex-ogsa-ts) | Unity games, Mono and IL2CPP | BepInEx 5 (Mono), BepInEx 6 (IL2CPP) | Subnautica Below Zero | [Latest release](https://github.com/BrianGilbert/bepinex-ogsa-ts/releases/latest) |
+| [bepinex-ogsa-ts](https://github.com/BrianGilbert/bepinex-ogsa-ts) | Unity games, Mono and IL2CPP | BepInEx 5 (Mono), BepInEx 6 (IL2CPP) | Subnautica Below Zero, Hyper Storm, Exo One, Sable | [Latest release](https://github.com/BrianGilbert/bepinex-ogsa-ts/releases/latest) |
 | [ue4ss-ogsa-ts](https://github.com/BrianGilbert/ue4ss-ogsa-ts) | Unreal Engine 4 and 5 games | UE4SS | The Gunk, Stray, Hot Wheels Unleashed, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/ue4ss-ogsa-ts/releases/latest) |
 | [uevr-ogsa-ts](https://github.com/BrianGilbert/uevr-ogsa-ts) | Unreal Engine 4 and 5 games in VR | UEVR | The Gunk, Stray | [Latest release](https://github.com/BrianGilbert/uevr-ogsa-ts/releases/latest) |
 
