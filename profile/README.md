@@ -30,8 +30,7 @@ Every OGSA standard is built the way the [Telemetry Standard](#ogsa-telemetry-st
   no account, nothing leaves the player's network.
 - **Adoptable on day one.** A standard ships with SDKs for the major engines
   and a reference implementation, so adding it is a small job, not a
-  project. Where developers can't add it themselves, loader mods add it to
-  games already on players' machines.
+  project.
 - **Proven, not promised.** Each standard comes with a conformance corpus
   that every implementation is tested against, and is validated against
   real games before it's called done.
@@ -164,7 +163,13 @@ not rediscovered per game.
 
 - **Validated against real games.** The schema has been mapped against more
   than 100 documented game outputs across 16 exercises with no open gaps,
-  including all 1,354 variables Microsoft Flight Simulator 2024 exposes.
+  including all 1,354 variables Microsoft Flight Simulator 2024 exposes and
+  all 250 documented
+  [iRacing telemetry variables](https://sajax.github.io/irsdkdocs/telemetry/)
+  plus its session data. Both have sender references ready to build
+  against
+  ([MSFS 2024](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-msfs2024.md),
+  [iRacing](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-iracing.md)).
 - **One canonical encoding.** Every implementation produces byte-identical
   Cap'n Proto for the same frame, proven against a shared
   [conformance corpus](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/tree/main/conformance)
