@@ -218,9 +218,8 @@ Help with the mods is on the [mod support server](https://discord.gg/yyCp5D2Ccp)
 ### Apps
 
 Two desktop apps cover both ends of the stream. Both are in development
-under [@BrianGilbert](https://github.com/BrianGilbert), and
-[sponsorship](https://github.com/sponsors/BrianGilbert) is what funds the
-time to finish them.
+under [@BrianGilbert](https://github.com/BrianGilbert), and like everything
+here they move forward with [sponsorship](https://github.com/sponsors/BrianGilbert).
 
 | App | What it does | Status |
 | --- | --- | --- |
@@ -260,7 +259,8 @@ exists now.
   new entries need evidence from at least two games.
 - **Contribute** issues and pull requests to any repository here.
 - **Sponsor the work** through
-  [GitHub Sponsors](https://github.com/sponsors/BrianGilbert). It funds the
-  specifications, validation and SDKs.
+  [GitHub Sponsors](https://github.com/sponsors/BrianGilbert). It moves
+  everything here forward: the OGSA standards and their SDKs, the loader
+  mods, OGSA-TS Bridge and GameConn.
 
 <sub>Founded by [Brian Gilbert](https://github.com/BrianGilbert) in 2024 and developed in the open. Everything here is MIT licensed and free for anyone to implement, from hobbyists to hardware vendors.</sub>
