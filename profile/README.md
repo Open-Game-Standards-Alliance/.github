@@ -179,9 +179,9 @@ not rediscovered per game.
   Cap'n Proto for the same frame, proven against a shared
   [conformance corpus](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/tree/main/conformance)
   that is independently checked with the official Cap'n Proto tools.
-- **Proven in shipped games.** The Loader mods from table below 
-  have run in Subnautica Below Zero, The Gunk, Stray and RoboCop: Rogue City,
-  Hot Wheels Unleashed, with no changes to the games.
+- **Proven in shipped games.** The [loader mods](#loader-mods) have run in
+  Subnautica Below Zero, Hot Wheels Unleashed, The Gunk, Stray and RoboCop:
+  Rogue City, with no changes to the games.
 
 ### Implementations
 
