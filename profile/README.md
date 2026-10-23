@@ -7,15 +7,18 @@
 [![Discord](https://img.shields.io/badge/chat-Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/tseF4Q6U99)
 [![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/BrianGilbert)
 
-Games increasingly live alongside other hardware and software: motion rigs,
-haptic vests, cockpits, dashboards, companion apps. Today every one of those
-connections is built per game, or locked to one vendor's ecosystem, so game
-developers have no easy path to the hardware and hardware makers have no easy
-path to the games.
+Games don't run in isolation. Around them sit peripherals, lighting,
+streaming and overlay tools, accessibility devices, companion apps and
+simulation hardware, all of which work better when they can talk to the
+game. Today almost every one of those connections is bespoke: built game by
+game, or tied to a single vendor's ecosystem. Developers support each device
+separately, device makers chase each game separately, and players get
+whatever happens to have been wired up.
 
 The **Open Game Standards Alliance** writes open, royalty-free standards for
-these connections, and ships what it takes to adopt them, so that each side
-implements a standard once and works with everything else that speaks it.
+the connections between games and everything around them, and ships the
+tools to adopt them, so each side implements a standard once and works with
+everything else that speaks it.
 
 ## How we build standards
 
