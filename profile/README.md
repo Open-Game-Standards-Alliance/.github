@@ -104,7 +104,7 @@ flowchart LR
 Add the package to `Packages/manifest.json`, pinned to a release:
 
 ```json
-"com.ogsa.telemetry.unity": "https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity.git#v0.2.0"
+"com.ogsa.telemetry.unity": "https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity.git#v0.3.0"
 ```
 
 Then add **OGSA-TS/Telemetry Publisher** to your vehicle and declare your
