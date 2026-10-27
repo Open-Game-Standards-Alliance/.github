@@ -72,7 +72,7 @@ flowchart LR
     subgraph sources["Sources"]
         P["Engine plugin<br/>Unity · Unreal · Godot · .NET"]
         M["Loader mod<br/>BepInEx · UE4SS · UEVR"]
-        B["OGSA-TS Bridge<br/>Forza · F1 · ACC · …"]
+        B["OGSA-TS Bridge<br/>Forza · F1 · ACC · MSFS · …"]
     end
     P -- "OGSA-TS over UDP multicast<br/>(local network only)" --> L(("LAN"))
     M -- "OGSA-TS" --> L
@@ -95,7 +95,7 @@ flowchart LR
 | **Building hardware or receiver software** | [ogsa-ts-dotnet](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet) for the receiving library and a reference receiver, then [IMPLEMENTING.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/IMPLEMENTING.md) |
 | **Implementing in another language** | [The standard](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard): the schema, the encoding rules and a conformance corpus to test against |
 | **Playing a game that has no telemetry** | A [loader mod](#loader-mods) |
-| **Playing a game with its own telemetry output** (Forza, F1, Assetto Corsa, ...) | [OGSA-TS Bridge](#apps), which translates it to OGSA-TS |
+| **Playing a game with its own telemetry output** (Forza, F1, Assetto Corsa, Microsoft Flight Simulator, ...) | [OGSA-TS Bridge](#apps), which translates it to OGSA-TS |
 | **Owning a motion rig or haptics** | [GameConn](#apps), which drives them from any OGSA-TS game |
 
 <details>
@@ -174,7 +174,8 @@ not rediscovered per game.
   plus its session data. Both have sender references ready to build
   against
   ([MSFS 2024](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-msfs2024.md),
-  [iRacing](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-iracing.md)).
+  [iRacing](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-iracing.md)),
+  and [OGSA-TS Bridge](#apps) already implements the MSFS one.
 - **One canonical encoding.** Every implementation produces byte-identical
   Cap'n Proto for the same frame, proven against a shared
   [conformance corpus](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/tree/main/conformance)
@@ -223,7 +224,7 @@ here they move forward with [sponsorship](https://github.com/sponsors/BrianGilbe
 
 | App | What it does | Status |
 | --- | --- | --- |
-| [OGSA-TS Bridge](https://github.com/BrianGilbert/ogsa-ts-bridge) | Translates the telemetry games already emit into OGSA-TS, so OGSA devices work with them today: Forza Horizon and Motorsport, F1, DiRT Rally 2.0, DiRT 4, WRC, Project CARS, Automobilista 2, Assetto Corsa, ACC, BeamNG.drive and Live for Speed. It detects the running game automatically and adds tens of microseconds of latency. | In development |
+| [OGSA-TS Bridge](https://github.com/BrianGilbert/ogsa-ts-bridge) | Translates the telemetry games already emit into OGSA-TS, so OGSA devices work with them today: Forza Horizon and Motorsport, F1, DiRT Rally 2.0, DiRT 4, WRC, Project CARS, Automobilista 2, Assetto Corsa, ACC, BeamNG.drive, Live for Speed, and Microsoft Flight Simulator 2020 and 2024 over SimConnect with about 110 channels. It detects the running game automatically and adds tens of microseconds of latency. | In development |
 | [GameConn](https://github.com/BrianGilbert/GameConn) | Receives OGSA-TS from any game on the network and drives hardware through plugins: Yaw motion simulators, DOF Reality platforms and audio exciters so far, with per-game profiles. It is built cross-platform, targeting at least Windows and Linux. The aim is for sponsorship to fund its development so that it can stay free. | In development |
 
 ---
