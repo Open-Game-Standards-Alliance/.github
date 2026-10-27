@@ -1,9 +1,9 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img src="assets/banner-light.svg" alt="Open Game Standards Alliance: open, royalty-free standards connecting games to the hardware and software around them">
+  <img src="assets/banner-light.svg" alt="Open Game Standards: open, royalty-free standards connecting games to the hardware and software around them">
 </picture>
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-86b65a)](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-86b65a)](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/LICENSE)
 [![Discord](https://img.shields.io/badge/chat-Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/tseF4Q6U99)
 [![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/BrianGilbert)
 
@@ -15,14 +15,14 @@ game, or tied to a single vendor's ecosystem. Developers support each device
 separately, device makers chase each game separately, and players get
 whatever happens to have been wired up.
 
-The **Open Game Standards Alliance** writes open, royalty-free standards for
+**Open Game Standards** writes open, royalty-free standards for
 the connections between games and everything around them, and ships the
 tools to adopt them, so each side implements a standard once and works with
 everything else that speaks it.
 
 ## How we build standards
 
-Every OGSA standard is built the way the [Telemetry Standard](#ogsa-telemetry-standard-ogsa-ts) was:
+Every OGS standard is built the way the [Telemetry Standard](#ogs-telemetry-standard-ogs-ts) was:
 
 - **Open and royalty-free.** MIT licensed, free for anyone to implement,
   from hobbyists to hardware vendors.
@@ -41,7 +41,7 @@ Every OGSA standard is built the way the [Telemetry Standard](#ogsa-telemetry-st
 
 | Standard | What it connects | Status |
 | --- | --- | --- |
-| [**OGSA Telemetry Standard (OGSA-TS)**](#ogsa-telemetry-standard-ogsa-ts) | Live game telemetry to motion platforms, haptics, dashboards and loggers | Published, v1 |
+| [**OGS Telemetry Standard (OGS-TS)**](#ogs-telemetry-standard-ogs-ts) | Live game telemetry to motion platforms, haptics, dashboards and loggers | Published, v1 |
 
 Have an interoperability problem between games and the hardware or software
 around them that a standard should solve? Bring it to
@@ -49,11 +49,11 @@ around them that a standard should solve? Bring it to
 
 ---
 
-## OGSA Telemetry Standard (OGSA-TS)
+## OGS Telemetry Standard (OGS-TS)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-standard-dark.svg">
-  <img align="right" width="120" src="assets/telemetry-standard.svg" alt="OGSA Telemetry Standard logo">
+  <img align="right" width="120" src="assets/telemetry-standard.svg" alt="OGS Telemetry Standard logo">
 </picture>
 
 Motion rigs, haptic vests and instrument dashboards all need the same thing
@@ -62,7 +62,7 @@ moment. Most games ship no telemetry at all, or tie it to one vendor's
 ecosystem, so device makers write a reader per game. One motion-software
 project alone maintains 72 of them.
 
-[OGSA-TS](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard)
+[OGS-TS](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard)
 lets a game describe itself once, on the local network, so that every device
 listening understands it.
 
@@ -72,11 +72,11 @@ flowchart LR
     subgraph sources["Sources"]
         P["Engine plugin<br/>Unity · Unreal · Godot · .NET"]
         M["Loader mod<br/>BepInEx · UE4SS · UEVR"]
-        B["OGSA-TS Bridge<br/>Forza · F1 · ACC · MSFS · …"]
+        B["OGS-TS Bridge<br/>Forza · F1 · ACC · MSFS · …"]
     end
-    P -- "OGSA-TS over UDP multicast<br/>(local network only)" --> L(("LAN"))
-    M -- "OGSA-TS" --> L
-    B -- "OGSA-TS" --> L
+    P -- "OGS-TS over UDP multicast<br/>(local network only)" --> L(("LAN"))
+    M -- "OGS-TS" --> L
+    B -- "OGS-TS" --> L
     L --> C["GameConn"]
     C --> R["Motion platforms"]
     C --> H["Haptics"]
@@ -88,15 +88,15 @@ flowchart LR
 
 | You are... | Start with |
 | --- | --- |
-| **Making a game in Unity** | [ogsa-ts-unity](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity): add a publisher component, bind your values |
-| **Making a game in Unreal** | [ogsa-ts-unreal](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unreal): a plugin with no third-party dependencies |
-| **Making a game in Godot 4 (.NET)** | [ogsa-ts-godot](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-godot): an addon with a publisher node |
-| **Running a custom .NET engine** | [ogsa-ts-dotnet](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet): the engine-agnostic core every C# plugin is built on |
-| **Building hardware or receiver software** | [ogsa-ts-dotnet](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet) for the receiving library and a reference receiver, then [IMPLEMENTING.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/IMPLEMENTING.md) |
-| **Implementing in another language** | [The standard](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard): the schema, the encoding rules and a conformance corpus to test against |
+| **Making a game in Unity** | [ogs-ts-unity](https://github.com/Open-Game-Standards/ogs-ts-unity): add a publisher component, bind your values |
+| **Making a game in Unreal** | [ogs-ts-unreal](https://github.com/Open-Game-Standards/ogs-ts-unreal): a plugin with no third-party dependencies |
+| **Making a game in Godot 4 (.NET)** | [ogs-ts-godot](https://github.com/Open-Game-Standards/ogs-ts-godot): an addon with a publisher node |
+| **Running a custom .NET engine** | [ogs-ts-dotnet](https://github.com/Open-Game-Standards/ogs-ts-dotnet): the engine-agnostic core every C# plugin is built on |
+| **Building hardware or receiver software** | [ogs-ts-dotnet](https://github.com/Open-Game-Standards/ogs-ts-dotnet) for the receiving library and a reference receiver, then [IMPLEMENTING.md](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/IMPLEMENTING.md) |
+| **Implementing in another language** | [The standard](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard): the schema, the encoding rules and a conformance corpus to test against |
 | **Playing a game that has no telemetry** | A [loader mod](#loader-mods) |
-| **Playing a game with its own telemetry output** (Forza, F1, Assetto Corsa, Microsoft Flight Simulator, ...) | [OGSA-TS Bridge](#apps), which translates it to OGSA-TS |
-| **Owning a motion rig or haptics** | [GameConn](#apps), which drives them from any OGSA-TS game |
+| **Playing a game with its own telemetry output** (Forza, F1, Assetto Corsa, Microsoft Flight Simulator, ...) | [OGS-TS Bridge](#apps), which translates it to OGS-TS |
+| **Owning a motion rig or haptics** | [GameConn](#apps), which drives them from any OGS-TS game |
 
 <details>
 <summary><b>Quick start: Unity</b></summary>
@@ -104,10 +104,10 @@ flowchart LR
 Add the package to `Packages/manifest.json`, pinned to a release:
 
 ```json
-"com.ogsa.telemetry.unity": "https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity.git#v0.3.0"
+"com.ogs.telemetry.unity": "https://github.com/Open-Game-Standards/ogs-ts-unity.git#v0.3.0"
 ```
 
-Then add **OGSA-TS/Telemetry Publisher** to your vehicle and declare your
+Then add **OGS-TS/Telemetry Publisher** to your vehicle and declare your
 channels in code. The package is plain C# source with no precompiled
 assemblies, and runs on Mono and IL2CPP.
 </details>
@@ -127,19 +127,19 @@ Telemetry->BindChannelRaw(Handle, [this]{ return Engine->Rpm; });
 <details>
 <summary><b>Quick start: Godot 4 (.NET)</b></summary>
 
-Copy `addon/ogsa_telemetry/` into your project as `addons/ogsa_telemetry/`,
-then enable **OGSA Telemetry (OGSA-TS)** under Project Settings > Plugins.
+Copy `addon/ogs_telemetry/` into your project as `addons/ogs_telemetry/`,
+then enable **OGS Telemetry (OGS-TS)** under Project Settings > Plugins.
 Nothing needs adding to your game's csproj.
 </details>
 
 <details>
 <summary><b>Quick start: see the stream</b></summary>
 
-With any OGSA-TS game running on your network:
+With any OGS-TS game running on your network:
 
 ```sh
-git clone https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet
-cd ogsa-ts-dotnet
+git clone https://github.com/Open-Game-Standards/ogs-ts-dotnet
+cd ogs-ts-dotnet
 dotnet run --project src/TelemetryReceive
 ```
 
@@ -149,7 +149,7 @@ and events, and flags anything that doesn't conform.
 
 ### At a glance
 
-OGSA-TS defines three frames on one UDP multicast group:
+OGS-TS defines three frames on one UDP multicast group:
 
 - **Discovery**, every two seconds: the game, its objects, and a dictionary
   of channels, each declared once with a name, type, unit and range.
@@ -163,7 +163,7 @@ the local network**. It is **extensible**: any game can declare its own
 channels, and receivers skip fields they don't recognise, so the schema
 grows without breaking deployed devices. And it is **precise**: units,
 axes and signs are settled once in
-[CONVENTIONS.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/CONVENTIONS.md),
+[CONVENTIONS.md](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/CONVENTIONS.md),
 not rediscovered per game.
 
 - **Validated against real games.** The schema has been mapped against more
@@ -173,12 +173,12 @@ not rediscovered per game.
   [iRacing telemetry variables](https://sajax.github.io/irsdkdocs/telemetry/)
   plus its session data. Both have sender references ready to build
   against
-  ([MSFS 2024](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-msfs2024.md),
-  [iRacing](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/reference-iracing.md)),
-  and [OGSA-TS Bridge](#apps) already implements the MSFS one.
+  ([MSFS 2024](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/reference-msfs2024.md),
+  [iRacing](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/reference-iracing.md)),
+  and [OGS-TS Bridge](#apps) already implements the MSFS one.
 - **One canonical encoding.** Every implementation produces byte-identical
   Cap'n Proto for the same frame, proven against a shared
-  [conformance corpus](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/tree/main/conformance)
+  [conformance corpus](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/tree/main/conformance)
   that is independently checked with the official Cap'n Proto tools.
 - **Proven in shipped games.** The [loader mods](#loader-mods) have run in
   Subnautica Below Zero, Hyper Storm, Exo One, Sable, Hot Wheels Unleashed,
@@ -188,12 +188,12 @@ not rediscovered per game.
 
 | Repository | What it is | CI |
 | --- | --- | --- |
-| [OGSA-Telemetry-Standard](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard) | The specification, schema, conventions, validation and conformance corpus | [![CI](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/actions/workflows/ci.yml) |
-| [ogsa-ts-dotnet](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet) | .NET reference implementation: sender core, receiving library, reference receiver | [![CI](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet/actions/workflows/ci.yml) |
-| [ogsa-ts-unity](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity) | Unity package (2022.3+ and Unity 6) | [![CI](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity/actions/workflows/ci.yml) |
-| [ogsa-ts-unreal](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unreal) | Unreal Engine plugin | [![CI](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unreal/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unreal/actions/workflows/ci.yml) |
-| [ogsa-ts-godot](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-godot) | Godot 4 (.NET) addon | [![CI](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-godot/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-godot/actions/workflows/ci.yml) |
-| [Motion-Telemetry-Documentation](https://github.com/Open-Game-Standards-Alliance/Motion-Telemetry-Documentation) | Background on motion telemetry concepts | |
+| [OGS-Telemetry-Standard](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard) | The specification, schema, conventions, validation and conformance corpus | [![CI](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/actions/workflows/ci.yml) |
+| [ogs-ts-dotnet](https://github.com/Open-Game-Standards/ogs-ts-dotnet) | .NET reference implementation: sender core, receiving library, reference receiver | [![CI](https://github.com/Open-Game-Standards/ogs-ts-dotnet/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-dotnet/actions/workflows/ci.yml) |
+| [ogs-ts-unity](https://github.com/Open-Game-Standards/ogs-ts-unity) | Unity package (2022.3+ and Unity 6) | [![CI](https://github.com/Open-Game-Standards/ogs-ts-unity/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-unity/actions/workflows/ci.yml) |
+| [ogs-ts-unreal](https://github.com/Open-Game-Standards/ogs-ts-unreal) | Unreal Engine plugin | [![CI](https://github.com/Open-Game-Standards/ogs-ts-unreal/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-unreal/actions/workflows/ci.yml) |
+| [ogs-ts-godot](https://github.com/Open-Game-Standards/ogs-ts-godot) | Godot 4 (.NET) addon | [![CI](https://github.com/Open-Game-Standards/ogs-ts-godot/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-godot/actions/workflows/ci.yml) |
+| [Motion-Telemetry-Documentation](https://github.com/Open-Game-Standards/Motion-Telemetry-Documentation) | Background on motion telemetry concepts | |
 
 Every SDK is plain source with no third-party runtime dependencies, so it
 builds wherever its engine builds: Windows, Linux, macOS, ARM, and
@@ -201,7 +201,7 @@ ahead-of-time platforms such as IL2CPP.
 
 ### Loader mods
 
-OGSA-TS for tens of thousands of Unity and Unreal Engine games that don't
+OGS-TS for tens of thousands of Unity and Unreal Engine games that don't
 ship it, with no changes to the game: each mod loads through an established
 mod loader, finds the pawn the player controls, and publishes its motion.
 They live under
@@ -210,9 +210,9 @@ on every change.
 
 | Mod | For | Loads through | Validated in | Download |
 | --- | --- | --- | --- | --- |
-| [bepinex-ogsa-ts](https://github.com/BrianGilbert/bepinex-ogsa-ts) | Unity games, Mono and IL2CPP | BepInEx 5 (Mono), BepInEx 6 (IL2CPP) | Subnautica Below Zero, Hyper Storm, Exo One, Sable | [Latest release](https://github.com/BrianGilbert/bepinex-ogsa-ts/releases/latest) |
-| [ue4ss-ogsa-ts](https://github.com/BrianGilbert/ue4ss-ogsa-ts) | Unreal Engine 4 and 5 games | UE4SS | The Gunk, Stray, Hot Wheels Unleashed, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/ue4ss-ogsa-ts/releases/latest) |
-| [uevr-ogsa-ts](https://github.com/BrianGilbert/uevr-ogsa-ts) | Unreal Engine 4 and 5 games in VR | UEVR | The Gunk, Stray, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/uevr-ogsa-ts/releases/latest) |
+| [bepinex-ogs-ts](https://github.com/BrianGilbert/bepinex-ogs-ts) | Unity games, Mono and IL2CPP | BepInEx 5 (Mono), BepInEx 6 (IL2CPP) | Subnautica Below Zero, Hyper Storm, Exo One, Sable | [Latest release](https://github.com/BrianGilbert/bepinex-ogs-ts/releases/latest) |
+| [ue4ss-ogs-ts](https://github.com/BrianGilbert/ue4ss-ogs-ts) | Unreal Engine 4 and 5 games | UE4SS | The Gunk, Stray, Hot Wheels Unleashed, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/ue4ss-ogs-ts/releases/latest) |
+| [uevr-ogs-ts](https://github.com/BrianGilbert/uevr-ogs-ts) | Unreal Engine 4 and 5 games in VR | UEVR | The Gunk, Stray, RoboCop: Rogue City | [Latest release](https://github.com/BrianGilbert/uevr-ogs-ts/releases/latest) |
 
 Help with the mods is on the [mod support server](https://discord.gg/yyCp5D2Ccp).
 
@@ -224,8 +224,8 @@ here they move forward with [sponsorship](https://github.com/sponsors/BrianGilbe
 
 | App | What it does | Status |
 | --- | --- | --- |
-| [OGSA-TS Bridge](https://github.com/BrianGilbert/ogsa-ts-bridge) | Translates the telemetry games already emit into OGSA-TS, so OGSA devices work with them today: Forza Horizon and Motorsport, F1, DiRT Rally 2.0, DiRT 4, WRC, Project CARS, Automobilista 2, Assetto Corsa, ACC, BeamNG.drive, Live for Speed, and Microsoft Flight Simulator 2020 and 2024 over SimConnect with about 110 channels. It detects the running game automatically and adds tens of microseconds of latency. | In development |
-| [GameConn](https://github.com/BrianGilbert/GameConn) | Receives OGSA-TS from any game on the network and drives hardware through plugins: Yaw motion simulators, DOF Reality platforms and audio exciters so far, with per-game profiles. It is built cross-platform, targeting at least Windows and Linux. The aim is for sponsorship to fund its development so that it can stay free. | In development |
+| [OGS-TS Bridge](https://github.com/BrianGilbert/ogs-ts-bridge) | Translates the telemetry games already emit into OGS-TS, so OGS devices work with them today: Forza Horizon and Motorsport, F1, DiRT Rally 2.0, DiRT 4, WRC, Project CARS, Automobilista 2, Assetto Corsa, ACC, BeamNG.drive, Live for Speed, and Microsoft Flight Simulator 2020 and 2024 over SimConnect with about 110 channels. It detects the running game automatically and adds tens of microseconds of latency. | In development |
+| [GameConn](https://github.com/BrianGilbert/GameConn) | Receives OGS-TS from any game on the network and drives hardware through plugins: Yaw motion simulators, DOF Reality platforms and audio exciters so far, with per-game profiles. It is built cross-platform, targeting at least Windows and Linux. The aim is for sponsorship to fund its development so that it can stay free. | In development |
 
 ---
 
@@ -256,12 +256,12 @@ exists now.
   candidate. Bring the problem and the evidence to Discord.
 - **Improve an existing one.** For the Telemetry Standard, shared channel
   names live in the
-  [Common Channels annex](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/CHANNELS.md);
+  [Common Channels annex](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/CHANNELS.md);
   new entries need evidence from at least two games.
 - **Contribute** issues and pull requests to any repository here.
 - **Sponsor the work** through
   [GitHub Sponsors](https://github.com/sponsors/BrianGilbert). It moves
-  everything here forward: the OGSA standards and their SDKs, the loader
-  mods, OGSA-TS Bridge and GameConn.
+  everything here forward: the OGS standards and their SDKs, the loader
+  mods, OGS-TS Bridge and GameConn.
 
 <sub>Founded by [Brian Gilbert](https://github.com/BrianGilbert) in 2024 and developed in the open. The standards and their SDKs are MIT licensed and free for anyone to implement, from hobbyists to hardware vendors.</sub>

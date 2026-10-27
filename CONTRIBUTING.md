@@ -1,7 +1,7 @@
 # Contributing
 
 Contributions are welcome across every repository in the
-[Open Game Standards Alliance](https://github.com/Open-Game-Standards-Alliance)
+[Open Game Standards](https://github.com/Open-Game-Standards)
 organization, from game developers, hardware vendors, tool authors and players.
 
 A repository with its own `CONTRIBUTING.md` overrides this page. Read that one
@@ -15,25 +15,25 @@ first; this is the default for repositories that have none.
 - **Open an issue for anything non-trivial.** A short discussion before the work
   saves rework, and for a standard it is required: changes to a standard are
   agreed in an issue before a pull request.
-- **Read the standard first.** For OGSA-TS,
-  [IMPLEMENTING.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/IMPLEMENTING.md)
+- **Read the standard first.** For OGS-TS,
+  [IMPLEMENTING.md](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/IMPLEMENTING.md)
   sets out the reading order, and
-  [CONVENTIONS.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/CONVENTIONS.md)
+  [CONVENTIONS.md](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/CONVENTIONS.md)
   fixes the units, frames and signs every value follows.
 
 ## Which repository
 
 | You want to change | Go to |
 | ------------------ | ----- |
-| The OGSA-TS schema, conventions, encoding rules or conformance corpus | [OGSA-Telemetry-Standard](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard) |
-| A channel or event name (add or ratify) | [CHANNELS.md](https://github.com/Open-Game-Standards-Alliance/OGSA-Telemetry-Standard/blob/main/CHANNELS.md) in the standard |
-| The .NET core, the reference receiver or the code generator | [ogsa-ts-dotnet](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet) |
-| The Unity package | [ogsa-ts-unity](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unity) |
-| The Unreal plugin or the C++ core | [ogsa-ts-unreal](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-unreal) |
-| The Godot addon | [ogsa-ts-godot](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-godot) |
+| The OGS-TS schema, conventions, encoding rules or conformance corpus | [OGS-Telemetry-Standard](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard) |
+| A channel or event name (add or ratify) | [CHANNELS.md](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/CHANNELS.md) in the standard |
+| The .NET core, the reference receiver or the code generator | [ogs-ts-dotnet](https://github.com/Open-Game-Standards/ogs-ts-dotnet) |
+| The Unity package | [ogs-ts-unity](https://github.com/Open-Game-Standards/ogs-ts-unity) |
+| The Unreal plugin or the C++ core | [ogs-ts-unreal](https://github.com/Open-Game-Standards/ogs-ts-unreal) |
+| The Godot addon | [ogs-ts-godot](https://github.com/Open-Game-Standards/ogs-ts-godot) |
 | A new standard | An issue on this repository, or the Discord, to start the conversation |
 
-The Unity package and the Godot addon vendor their core from ogsa-ts-dotnet.
+The Unity package and the Godot addon vendor their core from ogs-ts-dotnet.
 Change the core there, then sync it; edits made directly to a vendored copy are
 overwritten by the next sync.
 
@@ -65,8 +65,8 @@ overwritten by the next sync.
 
 Open an issue on the repository the bug is in, and include the SDK and engine
 versions (or commits) you are using, your OS, and the steps to reproduce. For
-wire problems, the output of ogsa-ts-dotnet's
-[TelemetryReceive](https://github.com/Open-Game-Standards-Alliance/ogsa-ts-dotnet)
+wire problems, the output of ogs-ts-dotnet's
+[TelemetryReceive](https://github.com/Open-Game-Standards/ogs-ts-dotnet)
 while the problem happens is the most useful thing you can attach.
 
 Security problems are the exception: do not open a public issue. Follow
