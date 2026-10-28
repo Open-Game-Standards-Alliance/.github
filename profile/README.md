@@ -70,7 +70,7 @@ listening understands it.
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#dcebd0', 'primaryTextColor': '#1d4730', 'primaryBorderColor': '#1d4730', 'lineColor': '#86b65a', 'clusterBkg': '#f1f7ec', 'clusterBorder': '#86b65a', 'edgeLabelBackground': '#f1f7ec'}}}%%
 flowchart LR
     subgraph sources["Sources"]
-        P["Engine plugin<br/>Unity · Unreal · Godot · .NET"]
+        P["Engine plugin<br/>Unity · Unreal · Godot · custom engines<br/>on PC, console or VR headset"]
         M["Loader mod<br/>BepInEx · UE4SS · UEVR"]
         B["OGS-TS Bridge<br/>Forza · F1 · ACC · MSFS · …"]
     end
@@ -80,10 +80,36 @@ flowchart LR
     L --> C["GameConn"]
     C --> R["Motion platforms"]
     C --> H["Haptics"]
-    L --> D["Dashboards and cockpits"]
+    L --> DEV["Hardware with a built-in receiver<br/>motion platforms · haptics · fans · lights · displays<br/>no control software needed"]
+    L --> LIT["Lighting and smart home"]
+    L --> D["Dashboards, cockpits<br/>and VR overlays"]
     L --> G["Loggers"]
     L --> MON["OGS-TS Monitor"]
 ```
+
+### What you can do with it
+
+- **VR without a PC.** A game on a standalone VR headset drives a motion
+  seat, haptic vest or wind fans over the home network. Headsets can be
+  receivers too, showing live instruments from a sim on a PC or console.
+- **Hardware that needs no software.** Motion platforms, haptics, wind fans,
+  shift lights, gauge clusters and wheel displays can build in an OGS-TS
+  receiver, with no control software on a PC. Each game
+  describes its own channels, so one implementation works with every
+  OGS-TS game.
+- **Accessibility.** Footsteps, gunfire and impacts become haptic or visual
+  cues, including the direction they came from.
+- **Lighting and the room.** WLED, Hue or Home Assistant react to damage,
+  engine RPM, race start and pause.
+- **Second screens and streaming.** Dashboards on a tablet, live overlays
+  on a streaming PC, nothing extra on the gaming machine.
+- **Handhelds and game streaming.** Play on a handheld or stream from
+  another room while a different device drives the rig.
+- **Several rigs, one game.** Co-pilot stations and venues with several
+  motion seats, with no per-device setup.
+- **Fitness, testing and research.** Smart trainer resistance from road
+  gradient, record-and-replay for tuning rigs, and synchronised logging
+  for research.
 
 ### Find your starting point
 
