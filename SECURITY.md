@@ -40,7 +40,8 @@ is read-only, from the game to the software around it, and stays on the local
 subnet by default. Reports that interest us most:
 
 - A datagram that crashes, hangs or corrupts memory in a receiver or decoder,
-  such as `Ogs.Telemetry.Receiving` or the C++ core in `ogs-ts-unreal`
+  such as `Ogs.Telemetry.Receiving`, the OGS-TS Monitor or the C++ core in
+  `ogs-ts-unreal`
 - A way for a sender or an SDK default to put telemetry beyond the local
   subnet, or to leak anything other than the telemetry the game chose to send
 - Anything in a standard's text that, implemented as written, would let one

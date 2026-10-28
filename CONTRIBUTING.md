@@ -31,6 +31,7 @@ first; this is the default for repositories that have none.
 | The Unity package | [ogs-ts-unity](https://github.com/Open-Game-Standards/ogs-ts-unity) |
 | The Unreal plugin or the C++ core | [ogs-ts-unreal](https://github.com/Open-Game-Standards/ogs-ts-unreal) |
 | The Godot addon | [ogs-ts-godot](https://github.com/Open-Game-Standards/ogs-ts-godot) |
+| The OGS-TS Monitor (desktop receiver and conformance checks) | [ogs-ts-monitor](https://github.com/Open-Game-Standards/ogs-ts-monitor) |
 | A new standard | An issue on this repository, or the Discord, to start the conversation |
 
 The Unity package and the Godot addon vendor their core from ogs-ts-dotnet.
@@ -65,9 +66,10 @@ overwritten by the next sync.
 
 Open an issue on the repository the bug is in, and include the SDK and engine
 versions (or commits) you are using, your OS, and the steps to reproduce. For
-wire problems, the output of ogs-ts-dotnet's
-[TelemetryReceive](https://github.com/Open-Game-Standards/ogs-ts-dotnet)
-while the problem happens is the most useful thing you can attach.
+wire problems, the most useful thing you can attach is what a receiver saw
+while the problem happened: the [OGS-TS Monitor](https://github.com/Open-Game-Standards/ogs-ts-monitor)'s Conformance tab
+and stream log, or the output of ogs-ts-dotnet's
+[TelemetryReceive](https://github.com/Open-Game-Standards/ogs-ts-dotnet).
 
 Security problems are the exception: do not open a public issue. Follow
 [SECURITY.md](SECURITY.md).

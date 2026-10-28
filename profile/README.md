@@ -82,6 +82,7 @@ flowchart LR
     C --> H["Haptics"]
     L --> D["Dashboards and cockpits"]
     L --> G["Loggers"]
+    L --> MON["OGS-TS Monitor"]
 ```
 
 ### Find your starting point
@@ -94,6 +95,7 @@ flowchart LR
 | **Running a custom .NET engine** | [ogs-ts-dotnet](https://github.com/Open-Game-Standards/ogs-ts-dotnet): the engine-agnostic core every C# plugin is built on |
 | **Building hardware or receiver software** | [ogs-ts-dotnet](https://github.com/Open-Game-Standards/ogs-ts-dotnet) for the receiving library and a reference receiver, then [IMPLEMENTING.md](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard/blob/main/IMPLEMENTING.md) |
 | **Implementing in another language** | [The standard](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard): the schema, the encoding rules and a conformance corpus to test against |
+| **Checking what a game sends, or testing your own sender** | [OGS-TS Monitor](https://github.com/Open-Game-Standards/ogs-ts-monitor): a desktop app for Windows, Linux and macOS that shows every sender on your network and checks it against the standard |
 | **Playing a game that has no telemetry** | A [loader mod](#loader-mods) |
 | **Playing a game with its own telemetry output** (Forza, F1, Assetto Corsa, Microsoft Flight Simulator, ...) | [OGS-TS Bridge](#apps), which translates it to OGS-TS |
 | **Owning a motion rig or haptics** | [GameConn](#apps), which drives them from any OGS-TS game |
@@ -135,16 +137,19 @@ Nothing needs adding to your game's csproj.
 <details>
 <summary><b>Quick start: see the stream</b></summary>
 
-With any OGS-TS game running on your network:
+Download the [OGS-TS Monitor](https://github.com/Open-Game-Standards/ogs-ts-monitor/releases/latest) for Windows, Linux
+or macOS and run it with any OGS-TS game on your network. It shows the
+game's objects and channels, attitude, track and live motion, events, and
+flags anything that doesn't conform. No game to hand? Its built-in demo
+sender shows you what to expect.
+
+Prefer a terminal? The reference receiver prints the same stream:
 
 ```sh
 git clone https://github.com/Open-Game-Standards/ogs-ts-dotnet
 cd ogs-ts-dotnet
 dotnet run --project src/TelemetryReceive
 ```
-
-The reference receiver prints the game's channel declarations, live motion
-and events, and flags anything that doesn't conform.
 </details>
 
 ### At a glance
@@ -193,6 +198,7 @@ not rediscovered per game.
 | [ogs-ts-unity](https://github.com/Open-Game-Standards/ogs-ts-unity) | Unity package (2022.3+ and Unity 6) | [![CI](https://github.com/Open-Game-Standards/ogs-ts-unity/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-unity/actions/workflows/ci.yml) |
 | [ogs-ts-unreal](https://github.com/Open-Game-Standards/ogs-ts-unreal) | Unreal Engine plugin | [![CI](https://github.com/Open-Game-Standards/ogs-ts-unreal/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-unreal/actions/workflows/ci.yml) |
 | [ogs-ts-godot](https://github.com/Open-Game-Standards/ogs-ts-godot) | Godot 4 (.NET) addon | [![CI](https://github.com/Open-Game-Standards/ogs-ts-godot/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-godot/actions/workflows/ci.yml) |
+| [ogs-ts-monitor](https://github.com/Open-Game-Standards/ogs-ts-monitor) | Desktop receiver for Windows, Linux and macOS: every sender on the network, live, with conformance checks | [![CI](https://github.com/Open-Game-Standards/ogs-ts-monitor/actions/workflows/ci.yml/badge.svg)](https://github.com/Open-Game-Standards/ogs-ts-monitor/actions/workflows/ci.yml) |
 | [Motion-Telemetry-Documentation](https://github.com/Open-Game-Standards/Motion-Telemetry-Documentation) | Background on motion telemetry concepts | |
 
 Every SDK is plain source with no third-party runtime dependencies, so it
