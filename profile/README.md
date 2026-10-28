@@ -59,8 +59,8 @@ around them that a standard should solve? Bring it to
 Motion rigs, haptic vests and instrument dashboards all need the same thing
 from a game: what the player's vehicle or character is doing, moment to
 moment. Most games ship no telemetry at all, or tie it to one vendor's
-ecosystem, so device makers write a reader per game. One motion-software
-project alone maintains 72 of them.
+ecosystem, so device makers write a reader per game. The plugin repository for
+one motion platform's software alone lists 72 of them.
 
 [OGS-TS](https://github.com/Open-Game-Standards/OGS-Telemetry-Standard)
 lets a game describe itself once, on the local network, so that every device
